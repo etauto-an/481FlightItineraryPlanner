@@ -20,9 +20,11 @@ In the repository file:
 ## Setting up Front End
 Use another terminal on the repository file:
 
-1. Install npm v10.9.3 / pnpm 
-2. Download all the dependencies
+1. Go to the frontend file
+``` cd frontend ```
+2. Install npm v10.9.3 / pnpm 
+3. Download all the dependencies
 ``` npm install ```
-3. Run the server
+4. Run the server
 ``` npm run dev ```
 
