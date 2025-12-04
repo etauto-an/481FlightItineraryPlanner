@@ -1,12 +1,23 @@
 from __future__ import annotations
 
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
 
 from backend.main import compute_itinerary
 
 app = FastAPI(title="Itinerary Planner API")
+
+# Enable CORS so the frontend (served on a different origin) can make
+# requests and the browser's preflight (OPTIONS) requests are handled.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # change to specific origins in production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 class ItineraryRequest(BaseModel):
