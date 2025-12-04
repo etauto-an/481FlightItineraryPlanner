@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import List
 
-from .main import compute_itinerary
+from backend.main import compute_itinerary
 
 app = FastAPI(title="Itinerary Planner API")
 
@@ -12,13 +12,17 @@ app = FastAPI(title="Itinerary Planner API")
 class ItineraryRequest(BaseModel):
     start: str
     targets: List[str]
-    max_iterations: Optional[int] = 200_000
-    time_limit: Optional[float] = 10.0
+    max_iterations: int = 2000
+    time_limit: float = 10.0
 
 
 class ItineraryResponse(BaseModel):
     path: List[str]
     cost: float
+
+@app.get("/")
+async def root():
+    return {"message": "Itinerary Planner API is running."}
 
 
 @app.post("/itinerary", response_model=ItineraryResponse)
