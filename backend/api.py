@@ -19,7 +19,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
+#-----------------------------------------------------------------
+# model for request body structures
 class ItineraryRequest(BaseModel):
     start: str
     targets: List[str]
@@ -30,6 +31,8 @@ class ItineraryRequest(BaseModel):
 class ItineraryResponse(BaseModel):
     path: List[str]
     cost: float
+
+#----------------------------------------------------------------
 
 @app.get("/")
 async def root():
