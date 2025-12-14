@@ -74,26 +74,60 @@ The frontend application will typically run at http://localhost:5173 (check the 
 
 # Setup (Windows)
 
-## Setting up Backend
-In the repository file:
+## Prerequisites
+1. Install Python
+-  Go to python.org/downloads and download the latest version.
+-  Run the installer.
+   -  Check the box that says "Add Python to PATH" at the bottom of the first screen before clicking "Install Now".
+-  Open a new terminal (PowerShell or Command Prompt) and run:
+```powershell
+python --version
+```
+2. Install Node.js and npm
+- Go to the Node.js website and download the LTS version.
+- Run the .msi installer and follow the prompts.
+-  Open a new terminal (PowerShell or Command Prompt) and run:
+```powershell
+node -v
+npm -v
+```
 
-1. (OPTIONAL) create a virtual environment (used name: venv) then activate it
-### On Windows
-``` python3 -m venv <environment name> ```
-``` <environment name>/Scripts/Activate ```
-2. pip install the dependency files
-``` pip install -r requirements.txt ```
-3. Run the backend server
-``` cd .. ```
-``` uvicorn backend.api:app --reload --port 8000 ```
+## Setting up Backend
+1. Navigate to the Back End Directory
+```powershell
+cd backend
+```
+
+2. Create  virtual environment and activate it.
+```powershell
+python3 -m venv venv
+venv/Scripts/Activate
+ ```
+ 
+3. Install the dependencies
+```powershell
+ pip install -r requirements.txt
+```
+
+4. Run the Back End Server
+```powershell
+uvicorn backend.api:app --reload --port 8000
+```
 
 ## Setting up Front End
-Use another terminal on the repository file:
+Open another terminal
 
-1. Go to the frontend file
-``` cd frontend ```
-2. Install npm v10.9.3 / pnpm 
-3. Download all the dependencies
-``` npm install ```
+1. Navigate to the Front End Directory
+```powershell
+cd frontend
+```
+2. Install dependencies:
+```powershell
+ npm install
+```
 4. Run the server
-``` npm run dev ```
+```powershell
+ npm run dev
+```
+
+The frontend application will typically run at http://localhost:5173 (check the terminal output for the exact URL).
