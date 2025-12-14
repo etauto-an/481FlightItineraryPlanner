@@ -3,8 +3,7 @@ This project aims to develop a web-based itinerary planning system capable of ge
 
 To provide a focused and contextually relevant experience, the system will limit all trip origins to three major airports serving the Los Angeles and Orange County regions: Los Angeles International Airport (LAX), Long Beach Airport (LGB), and John Wayne Airport (SNA). By tailoring the platform to these specific departure points, the project aligns the itinerary planner with the travel habits and needs of residents in Southern California, while also narrowing the problem scope to a manageable and well-defined portion of a larger flight network.
 
-# Setup (Ubuntu 24.04 LTS)
-
+# Setup (Ubuntu 24.04 LTS) - Preferred
 ## Prerequisites
 ### Node.js and NPM
 ```bash
