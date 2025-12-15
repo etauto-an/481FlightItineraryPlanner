@@ -1,5 +1,5 @@
 # Problem Statement
-This project aims to develop a web-based itinerary planning system capable of generating optimal travel routes across a simplified flight network. The application will allow users to input a customized set of destinations and will compute the most efficient sequence in which to visit them, based on factors such as total travel distance, number of flights, or overall travel time (depending on the optimization criteria selected).
+This project aims to develop a web-based itinerary planning system capable of generating optimal travel routes across a simplified flight network. The application will allow users to input a customized set of destinations and will compute the most efficient sequence in which to visit them, based on great circle distance.
 
 To provide a focused and contextually relevant experience, the system will limit all trip origins to three major airports serving the Los Angeles and Orange County regions: Los Angeles International Airport (LAX), Long Beach Airport (LGB), and John Wayne Airport (SNA). By tailoring the platform to these specific departure points, the project aligns the itinerary planner with the travel habits and needs of residents in Southern California, while also narrowing the problem scope to a manageable and well-defined portion of a larger flight network.
 
