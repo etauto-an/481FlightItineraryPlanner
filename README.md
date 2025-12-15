@@ -82,6 +82,10 @@ The frontend application will typically run at http://localhost:5173 (check the 
 ```powershell
 python --version
 ```
+If Windows refuses to install the .msix file, go on the Microsoft store and install
+- Python Install Manager
+- Python 3.13
+
 2. Install Node.js and npm
 - Go to the Node.js website and download the LTS version.
 - Run the .msi installer and follow the prompts.
@@ -91,18 +95,36 @@ node -v
 npm -v
 ```
 
+If npm -v does not work:
+
+Open powershell as administrator and run the command
+```powershell
+Set-ExecutionPolicy RemoteSigned
+```
+
 ## Setting up Backend
 1. Navigate to the Back End Directory
 ```powershell
 cd backend
 ```
+
+2. Create and enter a virtual environment
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
  
-2. Install the dependencies
+3. Install the dependencies
 ```powershell
  pip install -r requirements.txt
 ```
 
-3. Run the Back End Server
+4. Move one directory up
+```powershell
+cd ..
+```
+
+5. Run the Back End Server
 ```powershell
 uvicorn backend.api:app --reload --port 8000
 ```
