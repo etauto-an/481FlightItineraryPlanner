@@ -96,19 +96,13 @@ npm -v
 ```powershell
 cd backend
 ```
-
-2. Create  virtual environment and activate it.
-```powershell
-python3 -m venv venv
-venv/Scripts/Activate
- ```
  
-3. Install the dependencies
+2. Install the dependencies
 ```powershell
  pip install -r requirements.txt
 ```
 
-4. Run the Back End Server
+3. Run the Back End Server
 ```powershell
 uvicorn backend.api:app --reload --port 8000
 ```
